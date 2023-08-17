@@ -1,4 +1,4 @@
-SERVER_TASKS_URL = "https://yourdomain.tld/mturk-data/experiments/";
+SERVER_TASKS_URL = "/mturk-data/experiments/";
 
 function initialize() {
   const debug = new URL(window.location.href).searchParams.get("debug");
@@ -288,7 +288,7 @@ function prepareExperiment(
     func: function (callback) {
       // send request to bouncer to make sure the worker cannot participate again
       let bouncer_url = new URL(
-        "https://yourdomain.tld/mturk/bouncer/ban"
+        "/mturk/bouncer/ban"
       );
       let url = new URL(window.location.href);
       let turk_info = jsPsych.turk.turkInfo();

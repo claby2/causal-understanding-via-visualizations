@@ -220,7 +220,8 @@ function initialize() {
     showPreview();
   } else {
     let bouncer_url = new URL(
-      "https://yourdomain.tld/mturk/bouncer/requestaccess"
+      "/mturk/bouncer/requestaccess",
+      `${location.protocol}//${location.host}`
     );
     const eid = url.searchParams.get("exp");
     const tns = url.searchParams.get("tns");
